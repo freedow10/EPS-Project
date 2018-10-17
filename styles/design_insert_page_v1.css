@@ -1,0 +1,25 @@
+.btng-left{
+    width: 100%;
+    margin-top: 28px;
+}
+.option{
+    height: 60px;
+}
+
+.icon{
+    background-color: gray;
+    width: 140px;
+    height: 140px;
+    margin-top: 28px;
+    margin-left: 28px;
+}
+.right-upper{
+    height: 200px;
+}
+.right-lower{
+    height: 300px;
+}
+
+.input-group{
+    margin-top: 5px;
+}

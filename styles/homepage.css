@@ -8,8 +8,12 @@ html, body {
 
 .panel {
 	margin: 20px 0px 20px 0px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.panel .d-flex {
+	margin: 15px 0px;
 }
 
 .panel:hover {

@@ -1,6 +1,15 @@
 html, body {
     height:100%;
-};
+}
+
+.jumbotron {
+	background-image: url("../images/sun-rays-in-forest-11-1500x500.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	position: relative;
+  	z-index: -2;
+}
 
 .container-fluid {
 	display: flex;

@@ -6,9 +6,14 @@ html, body {
 	background-image: url("../images/sun-rays-in-forest-11-1500x500.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+	background-position: center;
+
+    background-attachment: fixed;
+
+    height: 100%;
+    
 	position: relative;
-  	z-index: -2;
+  	
 }
 
 .container-fluid {

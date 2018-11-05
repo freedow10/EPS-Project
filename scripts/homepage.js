@@ -6,3 +6,5 @@ Array.prototype.forEach.call(element, function(e) {
   	e.getElementsByClassName("d-flex")[0].innerHTML = placeholdertext;
 });
 
+
+

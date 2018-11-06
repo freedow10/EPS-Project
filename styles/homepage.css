@@ -2,19 +2,23 @@ html, body {
     height:100%;
 }
 
-.jumbotron {
-	background-image: url("../images/sun-rays-in-forest-11-1500x500.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-
+#header {
+    background-image: url("../images/abstract-architecture-black-and-white-262367.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
-
-    height: 100%;
-    
-	position: relative;
-  	
+    position: relative;
+    text-align: center;
+    height: 50vh;
 }
+
+
+    #header .container .title, .sub-title {
+        color: #333;
+        font-weight: 700;
+        font-family: 'Karla', sans-serif;
+    }
 
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dedede' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
@@ -30,8 +34,8 @@ html, body {
 
 .panel {
 	margin: 20px 0px 20px 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 .panel .d-flex {
@@ -41,4 +45,82 @@ html, body {
 .panel:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+
+#about {
+    background: #fff;
+    padding: 80px 0;
+}
+
+    #about .about-container .background {
+        min-height: 300px;
+        background: url(../images/pexels-photo-1509428.jpeg) center;
+        
+    }
+
+    #about .about-container .content {
+        background: #fff;
+    }
+
+    #about .about-container .title {
+        color: #333;
+        font-weight: 700;
+        font-size: 32px;
+    }
+
+@media (max-width: 768px) {
+    #about .about-container .title {
+        padding-top: 15px;
+    }
+}
+
+#about .about-container p {
+    line-height: 26px;
+}
+
+    #about .about-container p:last-child {
+        margin-bottom: 0;
+    }
+
+#about .about-container .icon-box {
+    background: #fff;
+    background-size: cover;
+    padding: 0 0 30px 0;
+}
+
+    #about .about-container .icon-box .icon {
+        float: left;
+        background: #fff;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 50%;
+        border: 2px solid #2dc997;
+    }
+
+        #about .about-container .icon-box .icon i {
+            color: #2dc997;
+            font-size: 24px;
+        }
+
+    #about .about-container .icon-box .title {
+        margin-left: 80px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+        #about .about-container .icon-box .title a {
+            color: #111;
+        }
+
+    #about .about-container .icon-box .description {
+        margin-left: 80px;
+        line-height: 24px;
+        font-size: 14px;
+    }
 

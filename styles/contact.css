@@ -1,0 +1,23 @@
+html, body {
+	height: 100%;
+	background-image: url("../images/abstract-architecture-black-and-white-262367.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	font-family: 'Karla', sans-serif;
+}
+
+#header {
+	text-align: center;
+	height: 15vh;
+}
+
+#info {
+	height: 70vh;
+
+
+}
+
+.footer-distributed {
+	margin-top: unset
+}

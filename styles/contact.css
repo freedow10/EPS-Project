@@ -4,6 +4,7 @@ html, body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
 	font-family: 'Karla', sans-serif;
 }
 
@@ -13,11 +14,6 @@ html, body {
 }
 
 #info {
-	height: 70vh;
+	
 
-
-}
-
-.footer-distributed {
-	margin-top: unset
 }

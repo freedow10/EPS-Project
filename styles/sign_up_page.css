@@ -1,0 +1,35 @@
+#signup {
+    min-height: 500px;
+    background: url(../images/20181019170852_IMG_8554-03.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.signup-about{
+    margin-top: 25px;
+}
+.signup-content{
+    background-color: #fff;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    border-radius: 2%;
+}
+.signup-about .title{
+    color: #eee;
+    font-weight: 700;
+    font-size: 55px;
+}
+.signup-about p{
+    color: #eee;
+    font-weight: 500;
+    font-size: 30px;
+}
+.signup-content .title{
+    color: #333;
+    font-weight: 700;
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.signup-btn{
+    margin-bottom: 15px;
+}

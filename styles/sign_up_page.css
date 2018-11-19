@@ -1,3 +1,6 @@
+/*{
+    border: 1px solid black;
+}*/
 #signup {
     min-height: 600px;
     background: url(../images/20181019170852_IMG_8554-03.jpeg);
@@ -8,7 +11,7 @@
     margin-top: 25px;
 }
 .signup-content{
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     margin-top: 25px;
     margin-bottom: 5px;
     border-radius: 2%;
@@ -32,4 +35,15 @@
 }
 .signup-btn{
     margin-bottom: 15px;
+}
+.signup-content ul{
+    list-style: none;
+    padding: 0;
+}
+.signup-title{
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 3px;
 }

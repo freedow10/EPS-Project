@@ -2,7 +2,7 @@
     border: 1px solid black;
 }*/
 #signup {
-    /*min-height: 600px;*/
+    min-height: 100%;
     background: url(../images/20180929014317_IMG_8156-03.jpeg);
     background-size: cover;
     background-repeat: no-repeat;

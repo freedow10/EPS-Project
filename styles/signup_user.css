@@ -2,18 +2,17 @@
     border: 1px solid black;
 }*/
 #signup {
-    min-height: 600px;
+    /*min-height: 600px;*/
     background: url(../images/20181019170852_IMG_8554-03.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .signup-about{
-    margin-top: 25px;
+    /*margin-top: 100px;*/
 }
 .signup-content{
     background-color: rgb(255, 255, 255);
-    margin-top: 25px;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     border-radius: 2%;
 }
 .signup-about .title{
@@ -46,4 +45,10 @@
     font-size: 16px;
     margin: 0;
     margin-bottom: 3px;
+}
+@media only screen and (max-width: 575px){
+.signup-content{
+    border-radius: 0%;
+}
+
 }

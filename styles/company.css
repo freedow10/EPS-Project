@@ -1,5 +1,6 @@
 html, body {
-    height:100%;
+    height: 100%;
+    font-family: 'Karla', sans-serif;
 }
 
 #header {
@@ -16,36 +17,16 @@ html, body {
     #header .container .title, .sub-title {
         color: #fff;
         font-weight: 700;
-        font-family: 'Karla', sans-serif;
+        
     }
 
     #header .container .title {
         font-size: 8rem;
     }
 
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dedede' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dedede' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-
 .container-fluid {
 	display: flex;
 }
 
-.panel {
-	margin: 20px 0px 20px 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-}
 
-.panel .d-flex {
-	margin: 15px 0px;
-}
-
-.panel:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
 

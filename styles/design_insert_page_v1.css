@@ -9,38 +9,19 @@
     margin-top: 28px;
 }
 .panel_left{
-    margin-top: 10%;
+    padding: 2% 0;
+    background-color: #eee;
+    //border-right: 1px solid black;
 }
 .panel_left a{
     color: black;
 }
 
-.icon{
-    background-color: gray;
-    width: 140px;
-    height: 140px;
-    margin-top: 28px;
-    margin-left: 28px;
-}
-
 .panel_right{
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 0 2%;
-    border: solid rgba(0, 0, 0, 0.4) 1px;
-    border-radius: 8px;
+    background-color: #fff;
+    padding: 2% 2%;
+    
 }
-.right-upper{
-    height: 200px;
-}
-.right-lower{
-    height: 250px;
-}
-
-.input-group{
-    margin-top: 10px;
-}
-
 .submit{
     margin-bottom: 10px;
 }

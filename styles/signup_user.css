@@ -37,7 +37,7 @@
 .signup-content{
     background-color: rgb(255, 255, 255);
     margin-bottom: 30px;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 .signup-about .title{
     color: #eee;

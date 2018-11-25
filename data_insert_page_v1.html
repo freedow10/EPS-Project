@@ -19,43 +19,85 @@
 <body>
     <section id="navheader"></section>
 
-    <section id="datainsert">
+    <section id="datainsert_page">
         <div class="container-fluid">
-            <div class="row">
-
+            <div class="row pt-3">
                 <div class="col-2"></div>
 
-                <div class="col-8 panel_right">
+                <div class="col-8 panel">
                     <div class="container">
-                        <h2>Basic personal data</h2>
-                        <p>Fill the form and click submit.</p>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>John</td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                </tr>
-                                <tr>
-                                    <td>Mary</td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                </tr>
-                                <tr>
-                                    <td>July</td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                    <td><input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon"></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button type="button" class="btn btn-primary submit">Submit</button>
+                        <div class="row">
+                            <div class="col-9">
+                                <h2>Question</h2>
+                                <div class="w-100"></div>
+                                <p>Here will have discription of question.</p>
+                            </div>
+                            <div class="col-3 company-logo"></div>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">1. Question</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="anwser">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">2. Question</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="anwser">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">3. Question</label>
+                                <p>what is your opinion about question 3?</p>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="formControlRange">4. How much do you like to go to gym?</label>
+                                <small>(right for like and left for dislike.)</small>
+                                <input type="range" class="form-control-range" id="formControlRange">
+                            </div>
+                            <div class="form-group">
+                                <label for="formControlRange">5. Your gender.</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                            <label class="form-group">6. Chose</lable>
+                            <small>(Chose options that you like.)</small>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                    option 1
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    option 2
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    option 3
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
+                                <label class="form-check-label" for="defaultCheck2">
+                                    option 4
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
+                          </form>
+
                     </div>
                 </div>
                 <div class="col-2"></div>

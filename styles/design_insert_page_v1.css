@@ -1,9 +1,9 @@
 #datainsert_page{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     
-    background-image: url("../images/20181117163129_IMG_0429-01.jpeg");
-    background-color: #ddd;
+    background-image: url("");
+    background-color: #eee;
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -11,6 +11,7 @@
 .panel{
     background-color: #fff;
     padding: 2% 2%;
+    /*border: 1px solid black;*/
     border-radius: 10px;
 }
 .submit{

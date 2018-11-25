@@ -21,7 +21,7 @@
 
     <section id="datainsert_page">
         <div class="container-fluid">
-            <div class="row pt-3">
+            <div class="row pt-3 pb-3">
                 <div class="col-2"></div>
 
                 <div class="col-8 panel">
@@ -51,7 +51,8 @@
                             <div class="form-group">
                                 <label for="formControlRange">4. How much do you like to go to gym?</label>
                                 <small>(right for like and left for dislike.)</small>
-                                <input type="range" class="form-control-range" id="formControlRange">
+                                
+                                <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange2">
                             </div>
                             <div class="form-group">
                                 <label for="formControlRange">5. Your gender.</label>
@@ -68,32 +69,32 @@
                                     </label>
                                 </div>
                             </div>
-                            <label class="form-group">6. Chose</lable>
+                            <label class="form-group">6. Multiple Choice</lable>
                             <small>(Chose options that you like.)</small>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="option1" id="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                 <label class="form-check-label" for="defaultCheck1">
                                     option 1
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                                 <label class="form-check-label" for="defaultCheck2">
                                     option 2
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
-                                <label class="form-check-label" for="defaultCheck2">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                                <label class="form-check-label" for="defaultCheck3">
                                     option 3
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="option2" id="defaultCheck2">
-                                <label class="form-check-label" for="defaultCheck2">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                                <label class="form-check-label" for="defaultCheck4">
                                     option 4
                                 </label>
-                            </div>
+                            </div>                                
 
                             <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
                           </form>

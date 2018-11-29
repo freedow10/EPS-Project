@@ -7,6 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    height: 82vh;
 }
 .signup-about{
     /*margin-top: 25px;*/
@@ -15,6 +16,7 @@
     background-color: rgb(255, 255, 255);
     margin-bottom: 30px;
     border-radius: 2%;
+    
 }
 .signup-about .title{
     color: #eee;
@@ -46,6 +48,11 @@
     font-size: 16px;
     margin: 0;
     margin-bottom: 3px;
+}
+.company-name{
+    background-color: #fff;
+    height: 60vh;
+    border-radius: 2%;
 }
 @media only screen and (max-width: 575px){
 .signup-content{

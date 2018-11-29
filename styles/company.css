@@ -3,16 +3,16 @@
         font-family: 'Karla', sans-serif;
     }
 
-    #header {
-        background-image: url("../images/sun-rays-in-forest-11-1500x500.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        height: 66vh;
-        position: relative;
-        text-align: center;
-    }
+#header {
+    background-image: url("../images/Den-Haag-Wooncomplex-Moerwijk-16254Erasmusweg2012.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 66vh;
+    position: relative;
+    text-align: center;
+}
 
     #header .container .title, .sub-title {
         color: #fff;

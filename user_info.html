@@ -20,30 +20,77 @@
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="styles/footer.css">
-	 <link rel="stylesheet" href="styles/jobs_page.css">
+	 <!-- <link rel="stylesheet" href="styles/jobs_page.css"> -->
+	 <link rel="stylesheet" href="styles/user_info_style.css">
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	
+	<title>User Info Page</title>
 
 </head>
+
+
 <body>
-    <hr class="">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html">
+            <img src="images/Logo.png" alt="" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="company.html">Company</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data_insert_page_v1.html">Data Insert</a>
+                </li>
+				<li class="nav-item">
+                    <a class="nav-link" href="jobs.html">Jobs</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+			<li class="nav-item">
+				<!-- Search form -->
+				<!-- <input class="form-control" type="text" placeholder="Search" aria-label="Search"> -->
+				<!-- </li> -->
+                <li class="nav-item">
+				   <a class="nav-link" href="user_info.html">Log In</a>
+                </li>
+			
+				
+            </ul>
+        </div>
+  </nav>
+
+
+    
     <div class="container target">
  
         <br>
         <div class="row">
             <div class="col-sm-3">
                 <!--left col-->
+				 <div class="panel panel-default">
+				<div class="panel-heading"><b>Profile</b></div>
                 <ul class="list-group" style="display: flex; flex-direction: column;">
  
                     <li class="list-group-item text-right">
                         <span class="pull-left">
-                            <strong class="">Profile </strong>
+                            <strong class="">Signed in as: </strong>
                         </span>
                         <img alt="" width="50" src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
-                        <br>
+                        <!-- <br> -->
                         <span class="pull-left">
                             <strong class=""> Max Mustermann </strong>
                         </span>
@@ -61,6 +108,7 @@
  
                 </ul>
             </div>
+			</div>
  
             <div class="col-sm-9" style="" contenteditable="false">
                 <div class="panel panel-default">

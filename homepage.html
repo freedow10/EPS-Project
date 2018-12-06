@@ -22,19 +22,30 @@
 </head>
 <body>
     <section id="navheader"></section>
-    <section id="header">
-        <div class="container d-flex" style="height:inherit">
-            <div class="row mx-auto align-self-center">
-                <div class="col-lg-12">
-                    <h1 class="title">DMN</h1>
-                    <h1 class="sub-title">Data Money Now</h1>
+    <section id="header" class="d-flex">
+        <div id="header-content" class="d-flex flex-column my-auto align-self-center w-100">
+            <div class="container d-flex h-100">
+                <div class="row h-100 mx-auto align-items-center">
+                    <div class="col-lg-12">
+                            <h1 id="title" class="display-3">DMN</h>
+                            <h2 id="sub-title" class="">Making your data be worth something</h2>
+                        <div class="row mt-5">
+                            <div class="col-lg-6 col-md-12">
+                                <button onclick="location.href='signup_user.html';" type="button" class="btn btn-dark btn-lg btn-block">Join Us</button>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <button onclick="location.href='company.html';" type="button" class="btn btn-dark btn-lg btn-block">Learn more</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </section>
     <section id="about">
         <div class="container">
-            <div class="row about-container" style="">
+            <div class="row about-container">
                 <div class="col-lg-6 content order-lg-1 order-2">
 
                     <h2 class="title">Few Words About Us</h2>
@@ -159,9 +170,9 @@
     
     <section id="laws">
         <h1 class="m-lg-auto" style="text-align:center">Privacy Laws</h1>
-        <div class="container-fluid" style="padding: 40px 50px">
+        <div class="container-fluid pt-3">
             <div class="row">
-                <div class="col-lg-8 offset-2">
+                <div class="col-lg-8 offset-lg-2">
                     <p class="lead">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquet dolor sed finibus convallis.
                         Ut eget leo nec eros malesuada feugiat non sit amet mi. Phasellus diam mi, tincidunt non nisl ullamcorper, pretium dignissim orci.

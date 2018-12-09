@@ -3,19 +3,19 @@
 }*/
 #signup {
     min-height: 100%;
-    background: url(../images/20181019170852_IMG_8554-03.jpeg);
+    background: url(../images/IMG_0587.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 .user-logo{
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(136, 175, 199, 0.514);
     background-image: url(../images/man-user.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .company-logo{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(136, 175, 199, 0.514);
     background-image: url(../images/multiple-users-silhouette.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,11 +28,8 @@
     padding-bottom: 15vh;
 }
 .header{
-    width: 100vw;
+    width: 100%;
     height: 15vh;
-}
-.signup-about{
-    /*margin-top: 100px;*/
 }
 .signup-content{
     background-color: rgb(255, 255, 255);
@@ -74,13 +71,13 @@
 .logos{
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 .title{
     color: #eee;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 @media only screen and (max-width: 575px){

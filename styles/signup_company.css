@@ -12,6 +12,13 @@
 .signup-about{
     /*margin-top: 25px;*/
 }
+.header{
+    width: 100%;
+    height: 5vh;
+}
+.slides{
+    height: 100%;
+}
 .signup-content{
     background-color: rgb(255, 255, 255);
     margin-bottom: 30px;

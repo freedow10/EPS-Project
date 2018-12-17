@@ -1,0 +1,38 @@
+<html>
+<header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+</header>
+<body onload ="func1();">
+
+
+</body>
+
+</html>
+
+
+
+<script>
+    function func1() {
+        fetch('https://localhost:44386/api/users')
+            .then(
+                function(response) {
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                        response.status);
+                        return;
+                        }
+
+                    // Examine the text in the response
+                    response.json().then(function(data) {
+                        console.log(data);
+                    });
+                    }
+                )
+                .catch(function(err) {
+                    console.log('Fetch Error :-S', err);
+                });
+      }
+      alert("alert alert")
+</script>

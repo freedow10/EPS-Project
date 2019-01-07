@@ -1,7 +1,8 @@
 /*{
     border: 1px solid black;
 }*/
-#signup {
+
+html, body{
     background: url(../images/IMG_0487.jpg);
     background-size: cover;
     background-repeat: no-repeat;

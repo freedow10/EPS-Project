@@ -55,6 +55,10 @@ hr.style14 {
     #sub-title {
         display: none;
     }
+
+    #banner-container{
+        height: 100%!important;
+    }
 }
 
 /*Small devices (landscape phones, 576px and up)*/

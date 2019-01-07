@@ -27,8 +27,8 @@
             <div class="row mx-auto my-auto w-100 align-self-center rounded py-3" style="background-color:#fff">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="float-left">
-                        <h2 id="Survey-Title">Question</h2>
-                        <h4 id="Survey-Descr">Here will have discription of question.</h4>
+                        <h2 id="Survey-Title"></h2>
+                        <h4 id="Survey-Descr"></h4>
                     </div>
                     <div class="float-right">
                         <img src="../images/Logo.PNG" />
@@ -123,27 +123,27 @@
 
                         <div class="form-group">
                             <legend id="Input-Label-Question-7" class="col-form-label"></legend>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox1" value="option1">
                                 <label id="Input-Question-7-Option-1" class="form-check-label" for="checkbox1"></label>
                             </div>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox2" value="option2">
                                 <label id="Input-Question-7-Option-2" class="form-check-label" for="checkbox2"></label>
                             </div>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox3" value="option3">
                                 <label id="Input-Question-7-Option-3" class="form-check-label" for="checkbox3"></label>
                             </div>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox4" value="option4">
                                 <label id="Input-Question-7-Option-4" class="form-check-label" for="checkbox4"></label>
                             </div>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox5" value="option5">
                                 <label id="Input-Question-7-Option-5" class="form-check-label" for="checkbox5"></label>
                             </div>
-                            <div class="form-check form-check">
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="checkbox6" value="option6">
                                 <label id="Input-Question-7-Option-6" class="form-check-label" for="checkbox6"></label>
                             </div>
@@ -175,10 +175,16 @@
 
                         <div class="form-group">
                             <label id="Input-Label-Question-10" class="col-form-label"></label>
-                            <input type="text" class="form-control" id="Input-Question-10" >
+                            <input type="text" class="form-control" id="Input-Question-10">
                         </div>
 
-                        <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
+                        <div class="row">
+                            <div class="col-lg-6 offset-lg-3">
+                                <button type="submit" class="btn btn-success submit mt-3" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                                <button type="reset" class="btn btn-danger mt-3 float-right">Reset</button>
+                            </div>
+                        </div>
+
                     </form>
 
 
@@ -186,6 +192,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -250,9 +278,6 @@
                     var RadioBTNID = 'Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1);
                     document.getElementById(RadioBTNID).innerHTML = survey.Questions[i].Options[j];
                 }
-
-
-
             }
 
 

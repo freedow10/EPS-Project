@@ -22,86 +22,167 @@
 
 <body>
     <section id="navheader"></section>
-
-    <section id="datainsert_page">
-        <div class="container-fluid">
-            <div class="row pt-5 pb-3">
-                <div class="col-2"></div>
-
-                <div class="col-8 panel">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-9">
-                                <h2>Question</h2>
-                                <div class="w-100"></div>
-                                <p>Here will have discription of question.</p>
-                            </div>
-                            <div class="col-3 company-logo"></div>
-                        </div>
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleFormControlInput1">1. Question</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="anwser">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlInput1">2. Question</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="anwser">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">3. Question</label>
-                                <p>what is your opinion about question 3?</p>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style="resize: none"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="formControlRange">4. Your gender.</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                        value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
-                                        Male
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                        value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        Female
-                                    </label>
-                                </div>
-                            </div>
-                            <label class="form-group">5. Multiple Choice</lable>
-                                <small>(Chose options that you like.)</small>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        option 1
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                                    <label class="form-check-label" for="defaultCheck2">
-                                        option 2
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                                    <label class="form-check-label" for="defaultCheck3">
-                                        option 3
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                                    <label class="form-check-label" for="defaultCheck4">
-                                        option 4
-                                    </label>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
-                        </form>
-
+    <section id="datainsert_page" class="d-flex h-100 py-5">
+        <div class="container d-flex h-100">
+            <div class="row mx-auto my-auto w-100 align-self-center rounded py-3" style="background-color:#fff">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="float-left">
+                        <h2 id="Survey-Title">Question</h2>
+                        <h4 id="Survey-Descr">Here will have discription of question.</h4>
+                    </div>
+                    <div class="float-right">
+                        <img src="../images/Logo.PNG" />
                     </div>
                 </div>
-                <div class="col-2"></div>
+
+                <div class="col-lg-10 offset-lg-1">
+                    <form>
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-1" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-1-Option" id="inlineRadio1"
+                                    value="option1">
+                                <label id="Input-Question-1-Option-1" class="form-check-label" for="inlineRadio1">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-1-Option" id="inlineRadio2"
+                                    value="option2">
+                                <label id="Input-Question-1-Option-2" class="form-check-label" for="inlineRadio1">2</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-2" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-2-Option" id="inlineRadio3"
+                                    value="option1">
+                                <label id="Input-Question-2-Option-1" class="form-check-label" for="inlineRadio3"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-2-Option" id="inlineRadio4"
+                                    value="option2">
+                                <label id="Input-Question-2-Option-2" class="form-check-label" for="inlineRadio4"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-3" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-3-Option" id="inlineRadio5"
+                                    value="option1">
+                                <label id="Input-Question-3-Option-1" class="form-check-label" for="inlineRadio5"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-3-Option" id="inlineRadio6"
+                                    value="option2">
+                                <label id="Input-Question-3-Option-2" class="form-check-label" for="inlineRadio6"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-4" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-4-Option" id="inlineRadio7"
+                                    value="option1">
+                                <label id="Input-Question-4-Option-1" class="form-check-label" for="inlineRadio7"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-4-Option" id="inlineRadio8"
+                                    value="option2">
+                                <label id="Input-Question-4-Option-2" class="form-check-label" for="inlineRadio8"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-5" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-5-Option" id="inlineRadio9"
+                                    value="option1">
+                                <label id="Input-Question-5-Option-1" class="form-check-label" for="inlineRadio9"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-5-Option" id="inlineRadio10"
+                                    value="option2">
+                                <label id="Input-Question-5-Option-2" class="form-check-label" for="inlineRadio10"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-6" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-6-Option" id="inlineRadio11"
+                                    value="option1">
+                                <label id="Input-Question-6-Option-1" class="form-check-label" for="inlineRadio11"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="Input-Question-6-Option" id="inlineRadio12"
+                                    value="option2">
+                                <label id="Input-Question-6-Option-2" class="form-check-label" for="inlineRadio12"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-7" class="col-form-label"></legend>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox1" value="option1">
+                                <label id="Input-Question-7-Option-1" class="form-check-label" for="checkbox1"></label>
+                            </div>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox2" value="option2">
+                                <label id="Input-Question-7-Option-2" class="form-check-label" for="checkbox2"></label>
+                            </div>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox3" value="option3">
+                                <label id="Input-Question-7-Option-3" class="form-check-label" for="checkbox3"></label>
+                            </div>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox4" value="option4">
+                                <label id="Input-Question-7-Option-4" class="form-check-label" for="checkbox4"></label>
+                            </div>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox5" value="option5">
+                                <label id="Input-Question-7-Option-5" class="form-check-label" for="checkbox5"></label>
+                            </div>
+                            <div class="form-check form-check">
+                                <input class="form-check-input" type="checkbox" id="checkbox6" value="option6">
+                                <label id="Input-Question-7-Option-6" class="form-check-label" for="checkbox6"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-8" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineRadio15" value="option1">
+                                <label id="Input-Question-8-Option-1" class="form-check-label" for="inlineRadio15"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineRadio16" value="option2">
+                                <label id="Input-Question-8-Option-2" class="form-check-label" for="inlineRadio16"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <legend id="Input-Label-Question-9" class="col-form-label"></legend>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineRadio17" value="option1">
+                                <label id="Input-Question-9-Option-1" class="form-check-label" for="inlineRadio17"></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineRadio18" value="option2">
+                                <label id="Input-Question-9-Option-2" class="form-check-label" for="inlineRadio18"></label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label id="Input-Label-Question-10" class="col-form-label"></label>
+                            <input type="text" class="form-control" id="Input-Question-10" >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
+                    </form>
+
+
+                </div>
             </div>
         </div>
     </section>
@@ -117,6 +198,66 @@
 
     <script>
         $("#navheader").load("./includes/navheader.html");
+
+        $.getJSON("./test/Test-Survey.json", function (data) {
+            var Survey = {
+                Title: "",
+                Description: "",
+                Reward: 0,
+                Questions: []
+            };
+
+            Survey.Title = data.Name;
+            Survey.Description = data.Description;
+            Survey.Reward = data.Reward;
+
+            data.Questions.forEach(element => {
+                var Question = {
+                    OrderNR: 0,
+                    Name: "",
+                    Type: null,
+                    Options: []
+                }
+
+                Question.OrderNR = element.Id;
+                Question.Name = element._Question;
+                Question.Type = element.QuestionType;
+
+                switch (element.QuestionType) {
+                    case 1:
+                        element.ClosedAnswers.forEach(e => {
+
+                            Question.Options.push(e.Title)
+                        });
+                        break;
+                }
+
+                Survey.Questions.push(Question);
+            });
+
+            fillHTMl(Survey);
+        });
+
+        function fillHTMl(survey) {
+            console.log(survey)
+            document.getElementById('Survey-Title').innerHTML = survey.Title;
+            document.getElementById('Survey-Descr').innerHTML = survey.Description;
+
+            for (var i = 0; i < survey.Questions.length; i++) {
+                var LabelID = 'Input-Label-Question-' + survey.Questions[i].OrderNR;
+                document.getElementById(LabelID).innerHTML = survey.Questions[i].OrderNR + '. ' + survey.Questions[i].Name;
+                for (var j = 0; j < survey.Questions[i].Options.length; j++) {
+                    var RadioBTNID = 'Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1);
+                    document.getElementById(RadioBTNID).innerHTML = survey.Questions[i].Options[j];
+                }
+
+
+
+            }
+
+
+        }
+
     </script>
 
 </body>

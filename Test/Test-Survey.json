@@ -10,7 +10,7 @@
   "Questions": [
     {
       "Id": 1,
-      "_Question": "Gebruikt u Social Media",
+      "_Question": "Gebruikt u Social Media?",
       "QuestionType": 1,
       "ClosedAnswers": [
         {
@@ -33,7 +33,7 @@
     },
     {
       "Id": 2,
-      "_Question": "Bent u bekend met de term: 'Personal Data'",
+      "_Question": "Bent u bekend met de term: 'Personal Data'?",
       "QuestionType": 1,
       "ClosedAnswers": [
         {
@@ -79,7 +79,7 @@
     },
     {
       "Id": 4,
-      "_Question": "Bent u bekend met Data verkopen of Datafuelled Jobs",
+      "_Question": "Bent u bekend met Data verkopen of Datafuelled Jobs?",
       "QuestionType": 1,
       "ClosedAnswers": [
         {
@@ -125,7 +125,7 @@
     },
     {
       "Id": 6,
-      "_Question": "Bent u bekend met Data verkopen of Datafuelled Jobs",
+      "_Question": "Bent u bekend met Data verkopen of Datafuelled Jobs?",
       "QuestionType": 1,
       "ClosedAnswers": [
         {

@@ -6,20 +6,11 @@ html, body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column
 }
 
-#datainsert_page{
-    
-}
-.panel{
-    background-color: #fff;
-    padding: 2% 2%;
-    /*border: 1px solid black;*/
-    border-radius: 10px;
-}
-.submit{
-    margin-bottom: 10px;
-}
 .company-logo{
     background-image: url("../images/Logo.PNG");
     background-repeat: no-repeat;
@@ -28,4 +19,8 @@ html, body {
 .questionnaire{
     /*border: 1px solid black;*/
     border-radius: 10px;
+}
+
+#datainsert_page form legend , #datainsert_page form label.col-form-label {
+    font-size: 1.2rem !important;
 }

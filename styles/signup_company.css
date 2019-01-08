@@ -3,7 +3,7 @@
 }*/
 
 html, body{
-    background: url(../images/IMG_0487.jpg);
+    background: url(../images/MoerwijkImage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,7 +14,7 @@ html, body{
     height: 5vh;
 }
 .slides{
-    height: 100%;
+    height: 80vh;
 }
 .signup-content{
     background-color: rgb(255, 255, 255);

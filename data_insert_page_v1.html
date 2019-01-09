@@ -36,21 +36,8 @@
                 </div>
 
                 <div class="col-lg-10 offset-lg-1">
-                    <form>
-                        <div class="form-group">
-                            <legend id="Input-Label-Question-1" class="col-form-label"></legend>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Input-Question-1-Option" id="inlineRadio1"
-                                    value="option1">
-                                <label id="Input-Question-1-Option-1" class="form-check-label" for="inlineRadio1">1</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Input-Question-1-Option" id="inlineRadio2"
-                                    value="option2">
-                                <label id="Input-Question-1-Option-2" class="form-check-label" for="inlineRadio1">2</label>
-                            </div>
-                        </div>
-
+                    <form id="Main-Survey">
+                        <!--
                         <div class="form-group">
                             <legend id="Input-Label-Question-2" class="col-form-label"></legend>
                             <div class="form-check form-check-inline">
@@ -173,47 +160,23 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <label id="Input-Label-Question-10" class="col-form-label"></label>
+                        <div  class="form-group">
+                            <label id="Input-Label-Question-10" class="col-form-label">10. Waarom zou u niet uw data willen verkopen?</label>
                             <input type="text" class="form-control" id="Input-Question-10">
                         </div>
-
-                        <div class="row">
+-->
+                        <div id="Button-Group" class="row">
                             <div class="col-lg-6 offset-lg-3">
-                                <button type="submit" class="btn btn-success submit mt-3" data-toggle="modal" data-target="#exampleModal">Submit</button>
+                                <button type="submit" class="btn btn-success submit mt-3" data-toggle="modal"
+                                    data-target="#exampleModal">Submit</button>
                                 <button type="reset" class="btn btn-danger mt-3 float-right">Reset</button>
                             </div>
                         </div>
-
                     </form>
-
-
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -249,14 +212,23 @@
 
                 Question.OrderNR = element.Id;
                 Question.Name = element._Question;
-                Question.Type = element.QuestionType;
+
 
                 switch (element.QuestionType) {
+                    case 0:
+                        Question.Type = "OpenQuestion";
+                        break;
                     case 1:
                         element.ClosedAnswers.forEach(e => {
-
                             Question.Options.push(e.Title)
                         });
+                        Question.Type = "ClosedQuestion";
+                        break;
+                    case 3:
+                        element.ClosedAnswers.forEach(e => {
+                            Question.Options.push(e.Title)
+                        });
+                        Question.Type = "MultiQuestion";
                         break;
                 }
 
@@ -266,17 +238,74 @@
             fillHTMl(Survey);
         });
 
+        var MainSurvey = document.getElementById('Main-Survey');
+
         function fillHTMl(survey) {
-            console.log(survey)
+
             document.getElementById('Survey-Title').innerHTML = survey.Title;
             document.getElementById('Survey-Descr').innerHTML = survey.Description;
 
             for (var i = 0; i < survey.Questions.length; i++) {
-                var LabelID = 'Input-Label-Question-' + survey.Questions[i].OrderNR;
-                document.getElementById(LabelID).innerHTML = survey.Questions[i].OrderNR + '. ' + survey.Questions[i].Name;
-                for (var j = 0; j < survey.Questions[i].Options.length; j++) {
-                    var RadioBTNID = 'Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1);
-                    document.getElementById(RadioBTNID).innerHTML = survey.Questions[i].Options[j];
+                // var LabelID = 'Input-Label-Question-' + survey.Questions[i].OrderNR;
+                // document.getElementById(LabelID).innerHTML = survey.Questions[i].OrderNR + '. ' + survey.Questions[i].Name;
+
+                var QuestionNumber = 'Question-' + survey.Questions[i].OrderNR;
+
+                var LabelText = survey.Questions[i].OrderNR + '. ' + survey.Questions[i].Name;
+
+                var formgroup = '<div class="form-group" id="' + QuestionNumber + '"> </div>';
+                var QuestionTitle;
+
+                $(formgroup).insertBefore("#Button-Group");
+                
+                switch (survey.Questions[i].Type) {
+                    case "OpenQuestion":
+                        QuestionTitle = '<label id="Input-Label-' + QuestionNumber + '" class="col-form-label" for="Input-"' + QuestionNumber + '>' + LabelText + '</label>';
+                        $("#" + QuestionNumber).append(QuestionTitle)
+
+                        var inputfield = '<input type="text" class="form-control" id="Input-' + QuestionNumber + '">'
+                        $("#" + QuestionNumber).append(inputfield)
+                        break;
+                    case "ClosedQuestion":
+                        QuestionTitle = '<legend id="Input-Label-' + QuestionNumber + '" class="col-form-label">' + LabelText + '</legend>';
+                        $("#" + QuestionNumber).append(QuestionTitle)
+
+                        for (var j = 0; j < survey.Questions[i].Options.length; j++) {
+                            var RadioBTNID = 'Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1);
+                            var RadioInlineID = QuestionNumber + "-" + "inlineRadio" + (j + 1);
+                            // document.getElementById(RadioBTNID).innerHTML = survey.Questions[i].Options[j];
+
+                            var RadioBTNTitle = survey.Questions[i].Options[j];
+
+                            var Radiobtn = '<div class="form-check form-check-inline">' +
+                                '<input class="form-check-input" type="radio" name="Input-' + QuestionNumber + '-Option" id="' + RadioInlineID + '" value="option' + (j + 1) + '">' +
+                                '<label id="' + RadioBTNID + '" class="form-check-label" for="' + RadioInlineID + '"> ' + RadioBTNTitle + '</label>' +
+                                '</div>';
+                            
+                                console.log(Radiobtn)
+                            $("#" + QuestionNumber).append(Radiobtn)
+                        }
+                        break;
+                    case "MultiQuestion":
+                        QuestionTitle = '<legend id="Input-Label-' + QuestionNumber + '" class="col-form-label">' + LabelText + '</legend>';
+                        $("#" + QuestionNumber).append(QuestionTitle)
+
+                        for (var j = 0; j < survey.Questions[i].Options.length; j++) {
+                            var CheckBoxID = 'Question-' + survey.Questions[i].OrderNR + '-checkbox-' + (j + 1);
+
+                            // document.getElementById(RadioBTNID).innerHTML = survey.Questions[i].Options[j];
+
+                            var CheckBoxTitle = survey.Questions[i].Options[j];
+
+                            var CheckBoxbtn = '<div class="form-check">' + 
+                                '<input class="form-check-input" type="checkbox" id="' + CheckBoxID + '" value="Question-' + survey.Questions[i].OrderNR + '-option-' + (j + 1) + '">' + 
+                                '<label id="Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1)+ '" class="form-check-label" for="' + CheckBoxID + '"> ' + CheckBoxTitle + '</label>' + 
+                                '</div>';
+                            
+                            $("#" + QuestionNumber).append(CheckBoxbtn);
+                        }
+
+                        break;
                 }
             }
 

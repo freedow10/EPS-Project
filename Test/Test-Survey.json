@@ -102,7 +102,7 @@
     },
     {
       "Id": 5,
-      "_Question": "Zou u uw data berkopen aan bedrijven?",
+      "_Question": "Zou u uw data verkopen aan bedrijven?",
       "QuestionType": 1,
       "ClosedAnswers": [
         {
@@ -149,7 +149,7 @@
     {
       "Id": 7,
       "_Question": "Welke data zou u verkopen?",
-      "QuestionType": 1,
+      "QuestionType": 3,
       "ClosedAnswers": [
         {
           "Id": 1,

@@ -12,6 +12,7 @@ function func1() {
 			"crossDomain": true,
 			"url": "https://localhost:44387/api/users",
 			"method": "POST",
+			"dataType": 'jsonp',
 			"headers": {
 					"Content-Type": "application/json",
 					"cache-control": "no-cache"

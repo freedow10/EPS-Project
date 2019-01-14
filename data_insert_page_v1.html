@@ -190,14 +190,20 @@
     <script>
         $("#navheader").load("./includes/navheader.html");
 
-        $.getJSON("./test/Test-Survey.json", function (data) {
-            var Survey = {
+        var Survey = {
+                Id: 0,
                 Title: "",
                 Description: "",
                 Reward: 0,
                 Questions: []
             };
 
+        let AllQuestion;
+
+        $.getJSON("./test/Test-Survey.json", function (data) {
+            AllQuestion =data.Questions;
+
+            Survey.Id = data.Id
             Survey.Title = data.Name;
             Survey.Description = data.Description;
             Survey.Reward = data.Reward;
@@ -263,7 +269,7 @@
                         QuestionTitle = '<label id="Input-Label-' + QuestionNumber + '" class="col-form-label" for="Input-"' + QuestionNumber + '>' + LabelText + '</label>';
                         $("#" + QuestionNumber).append(QuestionTitle)
 
-                        var inputfield = '<input type="text" class="form-control" name="' + QuestionNumber + '-Answer" id="Input-' + QuestionNumber + '">'
+                        var inputfield = '<input type="text" class="form-control" name="' + survey.Questions[i].OrderNR + '-Answer" id="Input-' + QuestionNumber + '">'
                         $("#" + QuestionNumber).append(inputfield)
                         break;
                     case "ClosedQuestion":
@@ -278,7 +284,7 @@
                             var RadioBTNTitle = survey.Questions[i].Options[j];
 
                             var Radiobtn = '<div class="form-check form-check-inline">' +
-                                '<input class="form-check-input" type="radio" name="' + QuestionNumber + '-Answer" id="' + RadioInlineID + '" value="' + RadioBTNTitle  + '">' +
+                                '<input class="form-check-input" type="radio" name="' + survey.Questions[i].OrderNR + '-Answer" id="' + RadioInlineID + '" value="' + RadioBTNTitle  + '">' +
                                 '<label id="' + RadioBTNID + '" class="form-check-label" for="' + RadioInlineID + '"> ' + RadioBTNTitle + '</label>' +
                                 '</div>';
                             
@@ -298,7 +304,7 @@
                             var CheckBoxTitle = survey.Questions[i].Options[j];
 
                             var CheckBoxbtn = '<div class="form-check">' + 
-                                '<input class="form-check-input" type="checkbox" name="Question-' + survey.Questions[i].OrderNR + '-Answer-' + (j + 1) + '" id="' + CheckBoxID + '" value="'+ CheckBoxTitle + '">' + 
+                                '<input class="form-check-input" type="checkbox" name="' + survey.Questions[i].OrderNR + '-Answer-' + (j + 1) + '" id="' + CheckBoxID + '" value="'+ CheckBoxTitle + '">' + 
                                 '<label id="Input-Question-' + survey.Questions[i].OrderNR + '-Option-' + (j + 1)+ '" class="form-check-label" for="' + CheckBoxID + '"> ' + CheckBoxTitle + '</label>' + 
                                 '</div>';
                             
@@ -314,7 +320,28 @@
 
 
         function submitForm() {
-            console.log($('form').serializeArray());
+        
+            var JSONModel = {
+                Id: "",
+                Answers: []
+            };
+            
+            JSONModel.Id = Survey.Id;
+            JSONModel.Answers = $('form').serializeArray();
+
+            JSONModel.Answers.forEach(element => {
+                var res = element.name.split("-");
+                AllQuestion.forEach(e =>{
+                     if(parseInt(res[0], 10) === (e.Id)){
+                        element.QuestionType = e.QuestionType;
+
+                     }
+
+                });
+            });
+
+            console.log(JSONModel)
+            // console.log(AllQuestion);
         }
     </script>
 

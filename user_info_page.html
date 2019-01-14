@@ -42,10 +42,8 @@
 		<br>
 		<div class="row">
 
-		
 			<div class="col-sm-3">
 				
-
 				<div class="panel panel-default">
 					<div class="panel-heading"><b>Profile</b></div>
 					<ul class="list-group" style="display: flex; flex-direction: column;">
@@ -64,15 +62,16 @@
 						<li class="list-group-item text-muted">Account Settings:</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a  href="javascript:changePW();">Change Password</a></strong></span>
 						</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="">Change Account
-										Settings</a></strong></span> </li>
+					
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changeCC();">Deposited Bank Account</a></strong></span>
 						</li>
 
 						<li class="list-group-item text-muted">Data Settings:</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changePersData();">Deposited Personal
-										Data</a></strong></span> </li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="">Past Data Transfers</a></strong></span>
+										Data</a></strong></span> </li>^
+										<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changeDP();">Change Data Policy
+											Settings</a></strong></span> </li>
+						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:pastDataTrans();">Past Data Transfers</a></strong></span>
 						</li>
 
 
@@ -94,9 +93,7 @@
 					</div>
 				</div> 
 
-
-
-				<!-- current job -->
+		<!-- current job -->
 				
 			<div class="panel panel-default target"  id="CurrentJob">
 					<div class="panel-heading" contenteditable="false"><b>Current Jobs</b></div>
@@ -180,8 +177,6 @@
 						</a>
 					</div>
 				</div>	
-	
-
 					</div>
 					</div>
 		
@@ -216,8 +211,6 @@
 								</a>
 
 							</div>
-
-
 							<!-- Modal -->
 							<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
 							 aria-hidden="true">
@@ -446,6 +439,7 @@
 						<div class="d-flex justify-content-around"> <button type="button" onclick="location.href='jobs.html'" class="btn btn-light">Show all jobs</button></div>
 					</div>
 				</div>
+
 				<!-- change PW -->
 				<div class="panel panel-default target "  id="CYP" style="display:none;"> 
 					<div class="panel-heading" contenteditable="false"><b>Change your password</b></div>
@@ -492,7 +486,7 @@
 
 				<!-- credit card data -->
 				<div class="panel panel-default target "  id="payment" style="display:none;"> 
-					<div class="panel-heading" contenteditable="false"><b>Receive Money to</b></div>
+					<div class="panel-heading" contenteditable="false"><b>Receive Money</b></div>
 					<div class="panel-body">
 						<div class="row ">
 						     <!-- form card cc payment -->
@@ -653,7 +647,7 @@
 									<div class="form-group row">
 										<label class="col-lg-3 col-form-label form-control-label"></label>
 										<div class="col-lg-9">
-											<a href="user_info_page.html" class="btn btn-secondary active" role="button" aria-pressed="true">Cancel</a>
+											<a href="user_info_page.html" class="btn btn-success active" role="button" aria-pressed="true">Cancel</a>
 											<input type="button" class="btn btn-primary" value="Save Changes">
 										</div>
 									</div>
@@ -662,12 +656,144 @@
 						</div>
 						<!-- /form user info -->
 
-
-
 							</div>
 						</div>
 					</div>
+
+
+				<!-- past data transfer -->
+					<div class="panel panel-default target "  id="PastData" style="display:none;"> 
+						<div class="panel-heading" contenteditable="false"><b>Past data transfers</b></div>
+						<div class="panel-body">
+							<div class="row ">
+								<div class=" col-lg-4 col-md-6 col-sd-6">
+									<a data-toggle="modal" data-target="#ModalX">
 	
+										<img src="images/dhn.jpg" class="img-fluid rounded  d-block mx-auto" height="125" width="125">
+										<!-- <div class="d-flex justify-content-around"><b>Duration: </b> 1 Month </div> -->
+										<!-- <div class="d-flex justify-content-around"><b>Earning:</b>30 Euro</div> -->
+	
+	
+										<table class="table borderless">
+											<tbody>
+												<tr>
+													<td><b>Duration: </b></td>
+													<td>1 Month</td>
+												</tr>
+												<tr>
+													<td><b>Earning: </b></td>
+													<td>30 Euro</td>
+												</tr>
+												<tr>
+													<td><b>Finished: </b></td>
+													<td>10. 01. 2019</td>
+												</tr>
+											</tbody>
+										</table>
+	
+										<div class="d-flex" style="text-align: center;"> In this health and food study you have to fill in a survey
+											(ca. 10 min.) every day for one month.</div>
+									</a>
+								</br>
+									<a href="user_info_page.html" class="btn btn-secondary active" role="button" aria-pressed="true">Back</a>
+								</div>
+								<!-- Modal -->
+								<div class="modal fade" id="ModalX" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+								 aria-hidden="true">
+									<div class="modal-dialog" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLongTitle">Job XY</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<div class="col">
+													<img src="images/dhn.jpg" class="img-fluid rounded  d-block mx-auto" height="125" width="125">
+													</br>
+													<table class="table  ">
+														<tbody>
+															<tr>
+																<td><b>Duration: </b></td>
+																<td>1 Month</td>
+															</tr>
+															<tr>
+																<td><b>Earning:</b></td>
+																<td>30 Euro</td>
+															</tr>
+															<tr>
+																<td><b>Published:</b></td>
+																<td>20.11.2018</td>
+															</tr>
+														</tbody>
+													</table>
+													<div class="d-flex" style="text-align: left;"><b>Job Description: </b> </div>
+													<div class="d-flex" style="text-align: left;"> In this health and food study you have to fill in a survey
+														(ca. 10 min.) every day for one month. 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+														eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et malesuada
+														fames ac. Fermentum posuere urna nec tincidunt praesent.</div>
+													<div class="d-flex" style="text-align: left;"></br>Contact:</div>
+													<table class="table  ">
+														<tbody>
+															<tr>
+																<td><b>Email: </b></td>
+																<td><a href=""> name@company.nl </a></td>
+															</tr>
+															<tr>
+																<td><b>Tel.: </b></td>
+																<td><a href=""> 1234 2341324 </a></td>
+															</tr>
+														</tbody>
+													</table>
+	
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Accept Job</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+							</div>
+						</div>
+					</div>
+				
+				<!-- change DP -->
+				<div class="panel panel-default target "  id="DP" style="display:none;"> 
+					<div class="panel-heading" contenteditable="false"><b>Data Policy</b></div>
+					<div class="panel-body">
+						<div class="row ">
+					<!-- form change DP -->
+					<div class="card border-light">
+
+						<div class="card-body ">
+							<form class="form" role="form" autocomplete="off">
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label form-control-label">First name</label>
+									<div class="col-lg-9">
+										<input class="form-control" type="text" value="Max">
+									</div>
+								</div>
+						
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label form-control-label"></label>
+									<div class="col-lg-9">
+										<a href="user_info_page.html" class="btn btn-success active" role="button" aria-pressed="true">Cancel</a>
+										<input type="button" class="btn btn-primary" value="Save Changes">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- /form user info -->
+
+						</div>
+					</div>
+				</div>
 			
 			</div>
 			
@@ -689,7 +815,10 @@ function changePW() {
    document.getElementById("CYP").style.display = "block";
    document.getElementById("payment").style.display = "none";
    document.getElementById("UserInfo").style.display = "none";
-none}
+   document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
+
+}
 
 function changeCC() {
   document.getElementById("IntJob").style.display = "none";
@@ -698,6 +827,10 @@ function changeCC() {
   document.getElementById("CYP").style.display = "none";
    document.getElementById("payment").style.display = "block";
    document.getElementById("UserInfo").style.display = "none";
+   document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
+
+
 }
 
 function changePersData(){
@@ -707,8 +840,34 @@ function changePersData(){
   document.getElementById("CYP").style.display = "none";
    document.getElementById("payment").style.display = "none";
    document.getElementById("UserInfo").style.display = "block";
+   document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
 
 }
+
+function pastDataTrans(){
+	document.getElementById("IntJob").style.display = "none";
+  document.getElementById("CurrentJob").style.display = "none";
+  document.getElementById("AB").style.display = "none";
+  document.getElementById("CYP").style.display = "none";
+   document.getElementById("payment").style.display = "none";
+   document.getElementById("UserInfo").style.display = "none";
+   document.getElementById("PastData").style.display = "block";
+   document.getElementById("DP").style.display = "none";
+
+}
+
+function changeDP(){
+	document.getElementById("IntJob").style.display = "none";
+  document.getElementById("CurrentJob").style.display = "none";
+  document.getElementById("AB").style.display = "none";
+  document.getElementById("CYP").style.display = "none";
+   document.getElementById("payment").style.display = "none";
+   document.getElementById("UserInfo").style.display = "none";
+   document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "block";
+}
+
 
 //     var x = document.getElementById("CYP");
 //   if (x.style.display === "none") {

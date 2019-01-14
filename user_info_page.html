@@ -62,14 +62,15 @@
 						<li class="list-group-item text-muted">Account Settings:</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a  href="javascript:changePW();">Change Password</a></strong></span>
 						</li>
-						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="">Change Account
-										Settings</a></strong></span> </li>
+					
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changeCC();">Deposited Bank Account</a></strong></span>
 						</li>
 
 						<li class="list-group-item text-muted">Data Settings:</li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changePersData();">Deposited Personal
-										Data</a></strong></span> </li>
+										Data</a></strong></span> </li>^
+										<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:changeDP();">Change Data Policy
+											Settings</a></strong></span> </li>
 						<li class="list-group-item text-right"><span class="pull-left"><strong class=""><a href="javascript:pastDataTrans();">Past Data Transfers</a></strong></span>
 						</li>
 
@@ -646,7 +647,7 @@
 									<div class="form-group row">
 										<label class="col-lg-3 col-form-label form-control-label"></label>
 										<div class="col-lg-9">
-											<a href="user_info_page.html" class="btn btn-secondary active" role="button" aria-pressed="true">Cancel</a>
+											<a href="user_info_page.html" class="btn btn-success active" role="button" aria-pressed="true">Cancel</a>
 											<input type="button" class="btn btn-primary" value="Save Changes">
 										</div>
 									</div>
@@ -660,7 +661,7 @@
 					</div>
 
 
-					<!-- past data transfer -->
+				<!-- past data transfer -->
 					<div class="panel panel-default target "  id="PastData" style="display:none;"> 
 						<div class="panel-heading" contenteditable="false"><b>Past data transfers</b></div>
 						<div class="panel-body">
@@ -759,7 +760,40 @@
 							</div>
 						</div>
 					</div>
-	
+				
+				<!-- change DP -->
+				<div class="panel panel-default target "  id="DP" style="display:none;"> 
+					<div class="panel-heading" contenteditable="false"><b>Data Policy</b></div>
+					<div class="panel-body">
+						<div class="row ">
+					<!-- form change DP -->
+					<div class="card border-light">
+
+						<div class="card-body ">
+							<form class="form" role="form" autocomplete="off">
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label form-control-label">First name</label>
+									<div class="col-lg-9">
+										<input class="form-control" type="text" value="Max">
+									</div>
+								</div>
+						
+
+								<div class="form-group row">
+									<label class="col-lg-3 col-form-label form-control-label"></label>
+									<div class="col-lg-9">
+										<a href="user_info_page.html" class="btn btn-success active" role="button" aria-pressed="true">Cancel</a>
+										<input type="button" class="btn btn-primary" value="Save Changes">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!-- /form user info -->
+
+						</div>
+					</div>
+				</div>
 			
 			</div>
 			
@@ -782,8 +816,9 @@ function changePW() {
    document.getElementById("payment").style.display = "none";
    document.getElementById("UserInfo").style.display = "none";
    document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
 
-none}
+}
 
 function changeCC() {
   document.getElementById("IntJob").style.display = "none";
@@ -793,6 +828,8 @@ function changeCC() {
    document.getElementById("payment").style.display = "block";
    document.getElementById("UserInfo").style.display = "none";
    document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
+
 
 }
 
@@ -804,6 +841,8 @@ function changePersData(){
    document.getElementById("payment").style.display = "none";
    document.getElementById("UserInfo").style.display = "block";
    document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "none";
+
 }
 
 function pastDataTrans(){
@@ -814,9 +853,21 @@ function pastDataTrans(){
    document.getElementById("payment").style.display = "none";
    document.getElementById("UserInfo").style.display = "none";
    document.getElementById("PastData").style.display = "block";
-
+   document.getElementById("DP").style.display = "none";
 
 }
+
+function changeDP(){
+	document.getElementById("IntJob").style.display = "none";
+  document.getElementById("CurrentJob").style.display = "none";
+  document.getElementById("AB").style.display = "none";
+  document.getElementById("CYP").style.display = "none";
+   document.getElementById("payment").style.display = "none";
+   document.getElementById("UserInfo").style.display = "none";
+   document.getElementById("PastData").style.display = "none";
+   document.getElementById("DP").style.display = "block";
+}
+
 
 //     var x = document.getElementById("CYP");
 //   if (x.style.display === "none") {

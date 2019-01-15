@@ -320,16 +320,19 @@
 
 
         function submitForm() {
+
+
+            
         
             var JSONModel = {
                 Id: "",
-                Answers: []
+                ViewQuestions: []
             };
             
             JSONModel.Id = Survey.Id;
-            JSONModel.Answers = $('form').serializeArray();
+            JSONModel.ViewQuestions = $('form').serializeArray();
 
-            JSONModel.Answers.forEach(element => {
+            JSONModel.ViewQuestions.forEach(element => {
                 var res = element.name.split("-");
                 AllQuestion.forEach(e =>{
                      if(parseInt(res[0], 10) === (e.Id)){
@@ -339,6 +342,29 @@
 
                 });
             });
+
+                        //console.log($('form').serializeArray());
+
+                        var l = JSON.stringify($('form').serializeArray());
+            console.log(l);
+
+
+var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://localhost:44387/api/SurveyUsers",
+        "method": "POST",
+        "headers": {
+                "Content-Type": "application/json",
+                "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSONModel
+};
+
+$.ajax(settings).done(function (response) {
+        console.log(response);
+});
 
             console.log(JSONModel)
             // console.log(AllQuestion);

@@ -4,7 +4,9 @@ html, body {
     
 }
 
-
+img{
+    z-index: auto;
+}
 .my-6 {
     margin-top: 4rem !important;
     margin-bottom: 4rem !important;

@@ -1,0 +1,29 @@
+html, body {
+    font-family: 'Karla', sans-serif;
+    height: 100%;
+    background-image: url("../images/IMG_0550.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column
+}
+
+hr.style14 {
+    border: 0;
+    height: .1rem;
+    width: 100%;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #545353, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #545353, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #545353, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #545353, #f0f0f0);
+}
+
+form input[type=radio] , form input[type=checkbox]{
+    transform:scale(1.5);
+}
